@@ -200,7 +200,7 @@
         <span>Simplest config</span>
     </h3>
 </doc-anchor-target>
-<p>Will compile documentation off any <strong>.md</strong> file in the repository and push to the <strong>gh-pages</strong> branch, creating a new branch to allow review if it already exists. The project name will be &quot;&lt;repository_owner&gt;/&lt;repository_name&gt;&quot;.</p>
+<p>Will compile documentation off any <strong>.md</strong> file in the repository and push to the <strong>gh-pages</strong> branch, creating a new branch to allow review if it already exists. The project name will be <strong>&lt;repository_owner&gt;/&lt;repository_name&gt;</strong>.</p>
 <pre v-highlight:yaml><code v-pre>steps:
 - uses: actions/checkout@v2
 
@@ -268,21 +268,21 @@
         <span>Pushes files only to root of repo branches</span>
     </h3>
 </doc-anchor-target>
-<p>❗ At this point we do not support specifying a target subfolder within a repository, so the target repository will be wiped and fresh documentation always placed at repository root directory.</p>
+<p>❗ At this point we do not support specifying a target subfolder within a branch, so that branch will be wiped and fresh documentation always placed at its root directory.</p>
 <doc-anchor-target id="no-check-for-target-branch">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#no-check-for-target-branch">#</doc-anchor-trigger>
         <span>No check for target branch</span>
     </h3>
 </doc-anchor-target>
-<p>❗ If you specify the default branch and <code v-pre>overwrite-branch: true</code>, the branch will be replaced with the documentation files. This can easily be undone by resetting the branch's HEAD to a previous commit where the files are still intact.</p>
+<p>❗ If you specify the default branch and <code v-pre>overwrite-branch: true</code>, the branch will be replaced with the documentation files. This can easily be undone by resetting the branch's <code v-pre>HEAD</code> to a previous commit where the files are still intact.</p>
 <doc-anchor-target id="no-access-to-files-after-step-done">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#no-access-to-files-after-step-done">#</doc-anchor-trigger>
         <span>No access to files after step done</span>
     </h3>
 </doc-anchor-target>
-<p>❗ Once the step is done, the target temporary directory where the website is built is not passed as output, but the files will be available at a clean version of the repository's root and they can be then manually published in a following step.</p>
+<p>❗ Once the Retype Action step is done, the target temporary directory where the website is built will not be available to next steps, but the files will be available at a clean version of the repository's root and they can be then manually published.</p>
 <doc-anchor-target id="additional-documentation">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#additional-documentation">#</doc-anchor-trigger>
